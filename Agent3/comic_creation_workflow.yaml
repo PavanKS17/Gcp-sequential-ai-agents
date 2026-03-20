@@ -1,0 +1,9 @@
+name: comic_creation_workflow
+agent_class: SequentialAgent
+description: A sequential workflow to manage the comic creation process from
+  script to final HTML.
+sub_agents:
+  - config_path: ./scripting_agent.yaml
+  - config_path: ./panelization_agent.yaml
+  - config_path: ./image_synthesis_agent.yaml
+  - config_path: ./assembly_agent.yaml
